@@ -1,7 +1,7 @@
 // class named ContentList
 import  {Content} from "./content-interface";
 
-class ContentList {
+export class ContentList {
   private contentArray: Content[];
 
   constructor() {
@@ -21,6 +21,10 @@ class ContentList {
     return this.contentArray.length;
   }
 
-
+  getItemByIndex (indexNumber : number){
+    // [sport1, sport2]
+    const sport = this.contentArray[indexNumber];
+    return `Id: ${sport.id}, Title: ${sport.title}, Description: ${sport.description}, Creator: ${sport.creator} `
+  }
 }
 
