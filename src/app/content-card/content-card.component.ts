@@ -27,7 +27,7 @@ export class ContentCardComponent {
     creator: 'Indian subcontinent'
   }
   contentListInstance = new ContentList(); // This is your list of sports
-  myName = "Nathan";
+  myName = "Monica";
 
   ngOnInit(){
     this.contentListInstance.addContentItem((this.item1));
