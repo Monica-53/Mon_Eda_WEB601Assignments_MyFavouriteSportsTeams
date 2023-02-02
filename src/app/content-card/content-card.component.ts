@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ContentList } from "../helper-files/content-list";
+
 import {Content} from "../helper-files/content-interface";
 
 @Component({
@@ -26,12 +26,10 @@ export class ContentCardComponent {
     description: 'It is the second most popular traditional tag game in the Indian suncontinent after Kabaddi.',
     creator: 'Indian subcontinent'
   }
-  contentListInstance = new ContentList(); // This is your list of sports
+
   myName = "Monica";
 
   ngOnInit(){
-    this.contentListInstance.addContentItem((this.item1));
-    this.contentListInstance.addContentItem((this.item2));
-    this.contentListInstance.addContentItem((this.item3));
+
   }
 }
