@@ -1,0 +1,5 @@
+
+<div style="display: flex; justify-content: space-around; flex-wrap: wrap">
+  <app-content-card *ngFor="let item of myList; first as isFirst" [content]="item" [class.is-first]="isFirst"></app-content-card>
+</div>
+
