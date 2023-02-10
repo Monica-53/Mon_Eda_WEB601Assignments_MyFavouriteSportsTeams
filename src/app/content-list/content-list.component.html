@@ -1,5 +1,21 @@
 
+<input>
+<button>Search</button>
+
+<p>Found: Soccer</p>
+
+<h1>Outdoor</h1>
 <div style="display: flex; justify-content: space-around; flex-wrap: wrap">
-  <app-content-card *ngFor="let item of myList; first as isFirst" [content]="item" [class.is-first]="isFirst"></app-content-card>
+  <app-content-card *ngFor="let item of myList| filterarray:'outdoor'; first as isFirst" [content]="item" [class.is-first]="isFirst" class="outdoor"></app-content-card>
+
 </div>
 
+<h1>Indoor</h1>
+<div style="display: flex; justify-content: space-around; flex-wrap: wrap">
+  <app-content-card *ngFor="let item of myList| filterarray:'indoor'; first as isFirst" [content]="item" [class.is-first]="isFirst" class="indoor"></app-content-card>
+</div>
+
+<h1>Outdoor</h1>
+<div style="display: flex; justify-content: space-around; flex-wrap: wrap">
+  <app-content-card *ngFor="let item of myList| filterarray:'notype'; first as isFirst" [content]="item" [class.is-first]="isFirst" class="notype"></app-content-card>
+</div>
