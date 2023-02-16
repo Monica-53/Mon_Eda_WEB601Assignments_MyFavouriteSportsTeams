@@ -1,9 +1,30 @@
-<div class="card">
+<!--<div class="card">-->
+<!--  <p>Content card</p>-->
+<!--  <p>ID: {{content?.id}}</p>-->
+<!-- <p>Title: {{content?.title}}</p>-->
+<!--  <p>Type: {{content?.type}}</p>-->
+<!-- <p>Description: {{content?.description}}</p>-->
+<!-- <img (click)="clickPhoto(content?.id, content?.title)" src="{{content?.imgURL}}" />-->
+<!--</div>-->
+
+<div class="'card">
   <p>Content card</p>
-  <p>ID: {{content?.id}}</p>
   <p>Title: {{content?.title}}</p>
-  <p>Type: {{content?.type}}</p>
   <p>Description: {{content?.description}}</p>
-  <img (click)="clickPhoto(content?.id, content?.title)" src="{{content?.imgURL}}" />
+  <p>imgURL:<p>Description: {{content?.imgURL}}</p>
 </div>
+
+
+
+<div class = "card">
+  <div class="card-body">
+    <h6 class ="card-title">{{content.title}}</h6>
+    <p class="card-text"> {{content.description}}</p>
+    <img *ngIf="content.imgURL; else defaultImage" class="card-img-top" [src]="content.imgURL">
+</div>
+  <ng-template #defaultimage>
+  <img class=card-img-top" src="/asssests/images/default-image.jpg
+  </ng-template>
+</div>
+
 

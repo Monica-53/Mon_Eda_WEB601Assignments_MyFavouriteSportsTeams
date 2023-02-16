@@ -34,4 +34,10 @@ export class ContentCardComponent  {
     console.log('Photo ID is ', photoID , ' and title is ', title)
   }
 
+  // clickEvent():void{
+  //   console.log(this.myList?.value)
+  // }
+
+
+
 }

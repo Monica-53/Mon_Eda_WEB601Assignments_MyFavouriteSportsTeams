@@ -1,9 +1,12 @@
+<div><app-content-card *ngFor="let item of myList as i first as isFirst" [content]="item" [class.is-first]="isFirst" >class="outdoor"></app-content-card>
 
-<input>
-<button>Search</button>
+<!--  <input ngModel="name"> {{ type | uppercase}}-->
+  <button>Search</button>
+</div>
 
 
-<p>Found: Soccer</p>
+
+
 
 <h1>Outdoor</h1>
 <div style="display: flex; justify-content: space-around; flex-wrap: wrap">
@@ -16,7 +19,17 @@
   <app-content-card *ngFor="let item of myList| filterarray:'indoor'; first as isFirst" [content]="item" [class.is-first]="isFirst" class="indoor"></app-content-card>
 </div>
 
-<h1>Outdoor</h1>
+<h1>no type</h1>
 <div style="display: flex; justify-content: space-around; flex-wrap: wrap">
   <app-content-card *ngFor="let item of myList| filterarray:'notype'; first as isFirst" [content]="item" [class.is-first]="isFirst" class="notype"></app-content-card>
 </div>
+
+<container-element [ngSwitch]="myList">
+  <some-element *ngSwitchCase="">...</some-element>
+  ...
+  <some-element *ngSwitchDefault>...</some-element>
+</container-element>
+
+
+
+
