@@ -24,11 +24,7 @@
   <app-content-card *ngFor="let item of myList| filterarray:'notype'; first as isFirst" [content]="item" [class.is-first]="isFirst" class="notype"></app-content-card>
 </div>
 
-<container-element [ngSwitch]="myList">
-  <some-element *ngSwitchCase="">...</some-element>
-  ...
-  <some-element *ngSwitchDefault>...</some-element>
-</container-element>
+
 
 
 
