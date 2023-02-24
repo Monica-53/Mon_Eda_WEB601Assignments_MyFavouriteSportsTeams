@@ -7,24 +7,57 @@
 <!-- <img (click)="clickPhoto(content?.id, content?.title)" src="{{content?.imgURL}}" />-->
 <!--</div>-->
 
-<div class="'card">
-  <p>Content card</p>
-  <p>Title: {{content?.title}}</p>
-  <p>Description: {{content?.description}}</p>
-  <p>imgURL:<p>Description: {{content?.imgURL}}</p>
-</div>
+<!--<div class="'card">-->
+<!--&lt;!&ndash;  <p>Content card</p>&ndash;&gt;-->
+<!--  <p>Title: {{content?.title}}</p>-->
+<!--  <p>Description: {{content?.description}}</p>-->
+<!--  <p>imgURL:{{content?.imgURL}}</p>-->
+<!--  <p>Title: {{content?.title}}</p>-->
+<!--</div>-->
+
 
 
 
 <div class = "card">
   <div class="card-body">
-    <h6 class ="card-title">{{content.title}}</h6>
-    <p class="card-text"> {{content.description}}</p>
-    <img *ngIf="content.imgURL; else defaultImage" class="card-img-top" [src]="content.imgURL">
+    <h1 class ="card-title">{{content?.title}}</h1>
+    <h2 class="card-text"> {{content?.description}}</h2>
+    <p class="card-text" appHoverAffect> {{content?.tags}}</p>
+    <img *ngIf="content?.imgURL; else defaultImage" class="card-img" [src]="content?.imgURL">
+    <h3 class="card-text" appHoverAffect> {{content?.type}}</h3>
+
+
 </div>
-  <ng-template #defaultimage>
-  <img class=card-img-top" src="/asssests/images/default-image.jpg
+  <ng-template #defaultImage>
+  <img class="card-img" src="/assets/defaultImage.jpeg" />
   </ng-template>
 </div>
+
+<!--<div class="content-card">&ndash;&gt;-->
+<!--  <h2 Hover-Affect="type">Card Title</h2>-->
+<!--  <ul>-->
+<!--    <li *ngFor="let tag of tags" Hover-Affect="tag">{{ tag }}</li>-->
+<!--  </ul>-->
+<!--  <p>{{ content }}</p>-->
+<!--</div>-->
+
+<!--<div *ngFor="let tag of tags"-->
+<!--     [ngStyle]="{ 'font-weight': tag.hover ? 'bold' : 'normal' }"-->
+<!--     (mouseover)="tag.hover = true"-->
+<!--     (mouseout)="tag.hover = false">-->
+<!--  {{ tag.name }}-->
+<!--</div>-->
+
+
+
+
+
+
+
+
+
+
+
+
 
 
