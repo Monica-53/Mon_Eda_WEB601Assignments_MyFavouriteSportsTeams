@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 
 @Component({
   selector: 'app-create-content',
@@ -6,5 +6,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./create-content.component.scss']
 })
 export class CreateContentComponent {
-
+  letourPromise = new Promise((success, fail) => {
+    let testPass = true;
+    if (testPass) {
+      success("Success was achieved!");
+    } else {
+      fail("Failure :(");
+    }
+    ourPromise.then(successResult =>
+      console.log(successResult))
+      .catch(failResult => console.log(failResult))
+  })
 }
+
+
+
+
+
+
+
+
+

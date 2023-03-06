@@ -1,6 +1,10 @@
 <p>create-content works!</p>
 <div>
   <label for="id">ID:</label>
-  <input type="text" id="id" [(ngModel)]="newContent.id">
-  <button(click)="submitNewContent"> Submit</button>
-</div>
+  <input type="text" id="id" name="id" [(ngModel)]="newContent.id">
+  <input type="text" title="title" name="title" [(ngModel)]="newContent.title">
+  <button type ="submitNewContent()">Submit</button>
+  </div>
+
+<p *ngIF="errorMessage" style=""color:red; font-weight:bold>{{errorMessage}}></p>
+
