@@ -7,6 +7,7 @@ import { ContentListComponent } from './content-list/content-list.component';
 import { FilterarrayPipe } from './filterarray.pipe';
 import { HoverAffectDirective } from './hover-affect.directive';
 import { CreateContentComponent } from './create-content/create-content.component';
+import {FormsModule} from "@angular/forms";
 // import { TestComponentComponent } from './test-component/test-component.component';
 
 @NgModule({
@@ -19,9 +20,10 @@ import { CreateContentComponent } from './create-content/create-content.componen
     CreateContentComponent,
     // TestComponentComponent
   ],
-  imports: [
-    BrowserModule
-  ],
+    imports: [
+        BrowserModule,
+        FormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

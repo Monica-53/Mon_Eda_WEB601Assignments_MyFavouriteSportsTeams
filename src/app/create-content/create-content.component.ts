@@ -1,4 +1,5 @@
-import { Component} from '@angular/core';
+import { Component,Output,EventEmitter} from '@angular/core';
+import {Content} from "../helper-files/content-interface";
 
 @Component({
   selector: 'app-create-content',
@@ -6,18 +7,55 @@ import { Component} from '@angular/core';
   styleUrls: ['./create-content.component.scss']
 })
 export class CreateContentComponent {
-  letourPromise = new Promise((success, fail) => {
-    let testPass = true;
-    if (testPass) {
-      success("Success was achieved!");
-    } else {
-      fail("Failure :(");
-    }
-    ourPromise.then(successResult =>
-      console.log(successResult))
-      .catch(failResult => console.log(failResult))
-  })
+  newContent : Content = {
+    id: 0,
+    title: '',
+    description :'',
+    creator: '',
+    imgURL: '',
+    type: ''
+  };
+
+  errorMessage = '';
+  @Output() newContentAdded = new EventEmitter();
+
+  submitNewContent() {
+    const ourPromise = new Promise((success, fail) => {
+      let testPass = true;
+      if (testPass) {
+        success(this.newContent);
+      } else {
+        fail("Failure :(");
+      }
+    });
+
+    ourPromise
+      .then((successResult) => {
+        console.log('Success add new content');
+        // Emit event so content list component knows about new content item
+        this.newContentAdded.emit(successResult);
+        // Clear
+        this.newContent = {
+          id: 0,
+          title: '',
+          description :'',
+          creator: '',
+          imgURL: '',
+          type: ''
+        }
+        this.errorMessage = '';
+      })
+      .catch((failResult) => {
+        console.log(failResult);
+        // Show error if fail
+        this.errorMessage = failResult;
+      })
+  }
 }
+
+
+
+
 
 
 
