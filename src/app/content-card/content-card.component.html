@@ -20,11 +20,12 @@
 
 <div class = "card">
   <div class="card-body">
-    <h1 class ="card-title">{{content?.title}}</h1>
-    <h2 class="card-text"> {{content?.description}}</h2>
-    <p class="card-text" appHoverAffect> {{content?.tags}}</p>
+    <h1 class ="card-title">ID: {{content?.id}}</h1>
+    <h1 class ="card-title">Title: {{content?.title}}</h1>
+    <h2 class="card-text">Description: {{content?.description}}</h2>
+    <p class="card-text" appHoverAffect>Tags: {{content?.tags}}</p>
     <img *ngIf="content?.imgURL; else defaultImage" class="card-img" [src]="content?.imgURL">
-    <h3 class="card-text" appHoverAffect> {{content?.type}}</h3>
+    <h3 class="card-text" appHoverAffect>Type: {{content?.type}}</h3>
 
 
 </div>
@@ -32,6 +33,9 @@
   <img class="card-img" src="/assets/defaultImage.jpeg" />
   </ng-template>
 </div>
+
+<hr>
+
 
 <!--<div class="content-card">&ndash;&gt;-->
 <!--  <h2 Hover-Affect="type">Card Title</h2>-->

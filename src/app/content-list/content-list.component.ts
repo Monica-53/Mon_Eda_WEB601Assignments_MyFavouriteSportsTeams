@@ -16,6 +16,7 @@ export class ContentListComponent {
       imgURL: "",
       type: 'outdoor',
       tags: ['india', 'easy game']
+
     },
 
     {
@@ -71,6 +72,10 @@ export class ContentListComponent {
       tags: ['india', 'difficult game']
     }
   ]
+
+  onNewContentAdded(data: any){
+    this.myList.push((data))
+  }
 }
 
 
