@@ -4,6 +4,9 @@
 
 //content=[ {    title: 'Content with image',    description: 'This content has an image.',    imgUrl: 'https://www.example.com/content-image.jpg'  },  {    title: 'Content without image',    description: 'This content does not have an image.',  }];
 
+.card {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
 
 
 
