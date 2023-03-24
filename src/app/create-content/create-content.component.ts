@@ -42,6 +42,7 @@ export class CreateContentComponent {
           creator: '',
           imgURL: '',
           type: ''
+
         }
         this.errorMessage = '';
       })
