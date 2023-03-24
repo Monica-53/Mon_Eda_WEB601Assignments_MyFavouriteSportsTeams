@@ -8,7 +8,7 @@ import { FilterarrayPipe } from './filterarray.pipe';
 import { HoverAffectDirective } from './hover-affect.directive';
 import { CreateContentComponent } from './create-content/create-content.component';
 import {FormsModule} from "@angular/forms";
-import { MessagesComponent } from './messages/messages.component';
+// import { MessagesComponent } from './messages/messages.component';
 // import { TestComponentComponent } from './test-component/test-component.component';
 
 @NgModule({
@@ -19,7 +19,7 @@ import { MessagesComponent } from './messages/messages.component';
     FilterarrayPipe,
     HoverAffectDirective,
     CreateContentComponent,
-    MessagesComponent,
+    // MessagesComponent,
     // TestComponentComponent
   ],
     imports: [
