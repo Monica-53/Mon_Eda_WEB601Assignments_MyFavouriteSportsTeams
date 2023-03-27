@@ -18,7 +18,7 @@ export class AppComponent {
     let foundSport;
     this.sportService.getSport(id).subscribe((sport) => {
       foundSport = sport;
-      this.messageService.add('Content Item at id: ' + id);
+      // this.messageService.add('Content Item at id: ' + id);
     });
     return foundSport;
   }
