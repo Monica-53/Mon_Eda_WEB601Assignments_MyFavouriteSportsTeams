@@ -31,7 +31,7 @@ export class CreateContentComponent {
 
     ourPromise
       .then((successResult) => {
-        console.log('Success add new content');
+        console.log('Success add new content'); //success
         // Emit event so content list component knows about new content item
         this.newContentAdded.emit(successResult);
         // Clear
