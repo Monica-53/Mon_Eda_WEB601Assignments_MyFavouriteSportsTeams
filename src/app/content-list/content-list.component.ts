@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
-import { Content } from "../helper-files/content-interface";
-// import {MYLIST} from "../helper-files/contentDb";
-import {SportService} from "../sport.service";
-import {MessageService} from "../message.service";
+import { Content } from '../helper-files/content-interface';
+import {MYLIST} from '../helper-files/contentDb';
+import {SportService} from '../sport.service';
+import {MessageService} from '../message.service';
+
+
 
 @Component({
   selector: 'app-content-list',
