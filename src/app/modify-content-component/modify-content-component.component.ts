@@ -1,7 +1,9 @@
 import { HttpHeaders } from '@angular/common/http';
 import { Component, EventEmitter, Output } from '@angular/core';
-import { Content } from '../helper-files/content-interface';
+
 import { MessageService } from '../message.service';
+import {MatDialog, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import {DialogDataExampleDialogComponent} from "../dialog-data-example-dialog/dialog-data-example-dialog.component";
 
 @Component({
   selector: 'app-modify-content-component',
@@ -9,31 +11,16 @@ import { MessageService } from '../message.service';
   styleUrls: ['./modify-content-component.component.scss'],
 })
 export class ModifyContentComponentComponent {
-  constructor(private messageService: MessageService) {}
+  constructor(private messageService: MessageService, public dialog: MatDialog) {}
   @Output() newContentAdded = new EventEmitter();
 
-  newContent: Content = {
-    id: null,
-    title: '',
-    description: '',
-    creator: '',
-    imgURL: '',
-    type: '',
-  };
 
-  submitNewContent() {
-    // Emit event to content-list
-    this.newContentAdded.emit(this.newContent);
-    // Push message
-
-    this.messageService.add('Content is successfully added')
-    this.newContent = {
-      id: null,
-      title: '',
-      description: '',
-      creator: '',
-      imgURL: '',
-      type: '',
-    };
+  openDialog() {
+    const dialogRef = this.dialog.open(DialogDataExampleDialogComponent, );
+    dialogRef.afterClosed().subscribe(data => {
+      console.log('The dialog was closed ,' , data);
+      // Create new content
+      this.newContentAdded.emit(data);
+    });
   }
 }

@@ -2,7 +2,7 @@
 
 <!-- <app-create-content (newContentAdded)="onNewContentAdded($event)"></app-create-content> -->
 
-<div>
+<div class="content-list">
   <app-content-card *ngFor="let item of myList as i first as isFirst" [content]="item" [class.is-first]="isFirst" >class="outdoor">
   </app-content-card>
 

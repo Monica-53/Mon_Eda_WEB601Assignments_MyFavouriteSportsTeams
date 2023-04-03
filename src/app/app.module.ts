@@ -15,6 +15,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './services/in-memory-data.service';
 import { ModifyContentComponentComponent } from './modify-content-component/modify-content-component.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonModule} from '@angular/material/button';
+import {MatInputModule} from '@angular/material/input';
+import {MatDialogModule} from '@angular/material/dialog';
+import { DialogDataExampleDialogComponent } from './dialog-data-example-dialog/dialog-data-example-dialog.component';
+import {MatCardModule} from '@angular/material/card';
+
 
 @NgModule({
   declarations: [
@@ -26,6 +33,7 @@ import { ModifyContentComponentComponent } from './modify-content-component/modi
     CreateContentComponent,
     MessagesComponent,
     ModifyContentComponentComponent,
+    DialogDataExampleDialogComponent,
     // TestComponentComponent
   ],
   imports: [
@@ -36,6 +44,11 @@ import { ModifyContentComponentComponent } from './modify-content-component/modi
       dataEncapsulation: false,
       delay: 3000, // 1second = 1000 miliseconds
     }),
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatInputModule,
+    MatDialogModule,
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

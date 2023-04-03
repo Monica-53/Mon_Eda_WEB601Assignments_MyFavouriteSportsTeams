@@ -18,23 +18,46 @@
 
 
 
-<div class = "card">
-  <div class="card-body">
-    <h1 class ="card-title">ID: {{content?.id}}</h1>
-    <h1 class ="card-title">Title: {{content?.title}}</h1>
-    <h2 class="card-text">Description: {{content?.description}}</h2>
-    <p class="card-text" appHoverAffect>Tags: {{content?.tags}}</p>
-    <img *ngIf="content?.imgURL; else defaultImage" class="card-img" [src]="content?.imgURL">
-    <h3 class="card-text" appHoverAffect>Type: {{content?.type}}</h3>
+<!--<div class = "card">-->
+<!--  <div class="card-body">-->
+<!--    <h1 class ="card-title">ID: {{content?.id}}</h1>-->
+<!--    <h1 class ="card-title">Title: {{content?.title}}</h1>-->
+<!--    <h2 class="card-text">Description: {{content?.description}}</h2>-->
+<!--    <p class="card-text" appHoverAffect>Tags: {{content?.tags}}</p>-->
+<!--    <img *ngIf="content?.imgURL; else defaultImage" class="card-img" [src]="content?.imgURL">-->
+<!--    <h3 class="card-text" appHoverAffect>Type: {{content?.type}}</h3>-->
 
 
-</div>
+<!--</div>-->
   <ng-template #defaultImage>
   <img class="card-img" src="/assets/defaultImage.jpeg" />
   </ng-template>
-</div>
+<!--</div>-->
 
-<hr>
+<!--<hr>-->
+
+
+<mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title> {{content?.title}}</mat-card-title>
+    <mat-card-subtitle></mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image *ngIf="content?.imgURL; else defaultImage" class="card-img" [src]="content?.imgURL">
+  <ng-template #defaultImage>
+    <img class="card-img" src="/assets/defaultImage.jpeg" />
+  </ng-template>
+<!--  <img mat-card-image src="{{content?.imgURL}}">-->
+  <mat-card-content>
+    <p>
+     {{content?.description}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+
+  </mat-card-actions>
+</mat-card>
+
 
 
 <!--<div class="content-card">&ndash;&gt;-->
