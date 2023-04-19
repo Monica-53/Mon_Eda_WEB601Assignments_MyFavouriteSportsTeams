@@ -1,0 +1,22 @@
+<p>content-detail works!</p>
+<div>
+ <p>Content card</p>
+  <p>ID: {{content?.id}}</p>
+ <p>Title: {{content?.title}}</p>
+ <p>Type: {{content?.type}}</p>
+ <img mat-card-image *ngIf="content?.imgURL; else defaultImage" class="card-img" [src]="content?.imgURL">
+  <ng-template #defaultImage>
+    <img class="card-img" src="/assets/defaultImage.jpeg" />
+  </ng-template>
+
+  <p>
+    {{content?.description}}
+   </p>
+</div>
+<a
+[routerLink]="['/list']"
+ 
+  
+>
+  goback to List </a
+><br />

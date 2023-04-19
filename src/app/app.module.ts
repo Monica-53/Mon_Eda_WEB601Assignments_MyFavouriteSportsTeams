@@ -9,6 +9,7 @@ import { HoverAffectDirective } from './hover-affect.directive';
 import { CreateContentComponent } from './create-content/create-content.component';
 import { FormsModule } from '@angular/forms';
 import { MessagesComponent } from './messages/messages.component';
+
 // import { TestComponentComponent } from './test-component/test-component.component';
 
 import { HttpClientModule } from '@angular/common/http';
@@ -21,6 +22,10 @@ import {MatInputModule} from '@angular/material/input';
 import {MatDialogModule} from '@angular/material/dialog';
 import { DialogDataExampleDialogComponent } from './dialog-data-example-dialog/dialog-data-example-dialog.component';
 import {MatCardModule} from '@angular/material/card';
+import { AppRoutingModule } from './app-routing.module';
+import { ContentDetailComponent } from './content-detail/content-detail.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+
 
 
 @NgModule({
@@ -34,6 +39,8 @@ import {MatCardModule} from '@angular/material/card';
     MessagesComponent,
     ModifyContentComponentComponent,
     DialogDataExampleDialogComponent,
+    ContentDetailComponent,
+    PageNotFoundComponent,
     // TestComponentComponent
   ],
   imports: [
@@ -49,6 +56,7 @@ import {MatCardModule} from '@angular/material/card';
     MatInputModule,
     MatDialogModule,
     MatCardModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent],
